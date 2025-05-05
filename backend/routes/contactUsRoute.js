@@ -35,5 +35,18 @@ router.post('/', async (req, res) => {
   }
 });
 
+
+router.get('/', async (req, res) => {
+  try {
+    const contacts = await Contact.find();
+    res.status(200).json(contacts);
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: 'Failed to fetch contacts: ' + err.message,
+    });
+  }
+});
+
 module.exports = router;
 
