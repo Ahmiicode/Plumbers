@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImage from '../../assets/contactbg.png'
+import { Link } from 'react-router-dom';
 
 const Herosection = () => {
   return (
@@ -35,9 +36,12 @@ const Herosection = () => {
             </p>
 
             {/* CTA Button */}
-            <button className='px-8 py-3 bg-yellow-500 text-black rounded-lg hover:bg-gray-100 transition-colors duration-200 text-sm md:text-base font-medium'>
+            <Link to='/booknow' className='px-8 py-3 bg-yellow-500 text-black rounded-lg hover:bg-gray-100 transition-colors duration-200 text-sm md:text-base font-medium'>
+   
               Book now
-            </button>
+    
+            </Link>
+            
           </div>
         </div>
       </div>

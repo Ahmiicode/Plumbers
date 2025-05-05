@@ -1,6 +1,7 @@
 import React from 'react'
 import aboutImage from '../assets/about.png'
 import '../index.scss';
+import { Link } from 'react-router-dom';
 
 const Aboutus = () => {
   return (
@@ -25,10 +26,13 @@ const Aboutus = () => {
               From small leaks to major installations, we handle every job with professionalism and expertise.
             </p>
           </div>
-          
-          <button className="button-yellow w-fit px-8 py-3 text-lg">
+          <Link to='/booknow' className='button-yellow w-fit px-8 py-3 text-lg'>
+
             Book Now
-          </button>
+      
+          </Link>
+         
+         
         </div>
 
         {/* Image */}

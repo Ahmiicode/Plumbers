@@ -82,7 +82,7 @@ const Topheader = () => {
       </NavLink>
       
       <NavLink
-        to="/"
+        to="/aboutus"
         className="text-gray-700 hover:text-blue-600 transition-colors"
         activeClassName="text-blue-600"
       >
@@ -90,7 +90,7 @@ const Topheader = () => {
       </NavLink>
       
       <NavLink
-        to="/"
+        to="/services"
         className="text-gray-700 hover:text-blue-600 transition-colors"
         activeClassName="text-blue-600"
       >
@@ -98,7 +98,7 @@ const Topheader = () => {
       </NavLink>
       
       <NavLink
-        to="/"
+        to="/project"
         className="text-gray-700 hover:text-blue-600 transition-colors"
         activeClassName="text-blue-600"
       >
@@ -135,25 +135,30 @@ const Topheader = () => {
 
       {/* Mobile Menu */}
       <div className={`lg:hidden bg-white overflow-hidden transition-all duration-300 ${open ? 'max-h-96' : 'max-h-0'}`}>
-        <div className="flex flex-col items-center gap-4 py-4">
-          {['Home', 'About us', 'Service', 'Project', 'Contact'].map((item) => (
-            <a 
-              key={item} 
-              href="/" 
-              className="text-gray-700 hover:text-blue-600"
-              onClick={() => setOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
-          <Link to='/booknow'>
-          <button className="button-yellow mt-2 px-6 py-2">
-            Book Now
-          </button>
-          </Link>
-       
-        </div>
-      </div>
+  <div className="flex flex-col items-center gap-4 py-4">
+    {[
+      { label: 'Home', path: '/' },
+      { label: 'About us', path: '/aboutus' },
+      { label: 'Service', path: '/services' },
+      { label: 'Project', path: '/project' },
+      { label: 'Contact', path: '/contactus' }
+    ].map((item) => (
+      <Link 
+        key={item.path} 
+        to={item.path}
+        className="text-gray-700 hover:text-blue-600"
+        onClick={() => setOpen(false)}
+      >
+        {item.label}
+      </Link>
+    ))}
+    <Link to='/booknow'>
+      <button className="button-yellow mt-2 px-6 py-2">
+        Book Now
+      </button>
+    </Link>
+  </div>
+</div>
     </div>
   );
 };

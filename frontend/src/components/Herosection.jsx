@@ -13,10 +13,10 @@ const Herosection = () => {
            style={{ backgroundImage: `url(${heroImage})` }}>
         
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-blue-900/80 to-blue-900" />
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-blue-900/ to-blue-900" />
         
         {/* Content Container */}
-        <div className="absolute top-1/2 -translate-y-1/2 container mx-auto px-4 sm:px-6 lg:px-8 text-white z-10">
+        <div className="absolute top-1/2 -translate-y-1/2 ml-0 lg:ml-16 container mx-auto px-4 sm:px-6 lg:px-8 text-white z-10">
           <div className="max-w-2xl xl:max-w-3xl">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Your Trusted Plumbing Experts Fast, Reliable, Affordable!

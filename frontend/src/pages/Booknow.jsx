@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import heroImage from '../assets/main.png';
 import uprImage from '../assets/uper.png';
+import Service from '../components/services/Service'
 
 const Booknow = () => {
   const [formData, setFormData] = useState({
@@ -186,6 +187,7 @@ const Booknow = () => {
           />
         </div>
       </div>
+      <Service/>
     </div>
   );
 }
